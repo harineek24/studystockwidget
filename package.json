@@ -1,0 +1,15 @@
+{
+  "name": "study-stock-widget",
+  "version": "1.0.0",
+  "description": "A tiny always-on-top study ticker for Windows.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "uiohook-napi": "^1.5.4"
+  },
+  "devDependencies": {
+    "electron": "^36.0.0"
+  }
+}

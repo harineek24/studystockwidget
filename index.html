@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Stock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="note">
+    <header class="topbar">
+      <span class="eyebrow">YOUR STUDY STOCK</span>
+      <div class="window-actions">
+        <button id="hideButton" title="Hide to tray" aria-label="Hide">—</button>
+      </div>
+    </header>
+    <section class="ticker">
+      <div class="money-row"><div id="money" class="money">$100.00</div><div id="rate" class="rate">$0.00/min</div></div>
+      <div id="status" class="status">Starting tracker…</div>
+    </section>
+    <section class="stats">
+      <div><span class="label">TODAY</span><strong id="todayMinutes">0 min</strong></div>
+      <div><span class="label">LIFETIME</span><strong id="lifetimeMinutes">0 min</strong></div>
+    </section>
+    <section class="chart-area">
+      <div class="chart-heading"><span>LIVE STOCK · LAST 60 SECONDS</span><span id="trend">LIVE</span></div>
+      <svg id="chart" viewBox="0 0 260 58" role="img" aria-label="Live study stock value over the last 60 seconds">
+        <path id="chartStudy" class="chart-line study-line" d="" />
+        <path id="chartIdle" class="chart-line idle-line" d="" />
+        <path id="chartClosed" class="chart-line closed-line" d="" />
+      </svg>
+      <div id="chartLabels" class="chart-labels"><span>60 SEC AGO</span><span>NOW</span></div>
+    </section>
+    <footer>
+      <button id="studyButton" class="primary">I'm studying</button>
+      <button id="pauseButton" class="secondary">Pause</button>
+    </footer>
+    <div class="hint">Ctrl + Shift + S toggles study override</div>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>
